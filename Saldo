@@ -1,0 +1,44 @@
+import datetime
+import json
+class Conta:
+    def __init__(self, id, id_cliente, DataDeAbertura, Saldo):
+        self.__id = id
+        self.__id_cliente = id_cliente
+        self.__DataDeAbertura = DataDeAbertura
+        self.__Saldo = Saldo
+
+    def get_id(self): return self.__id
+    def get_Id_Cliente(self): return self.__id_cliente
+    def get_DataDeAbertura(self): return self.__DataDeAbertura
+    def get_Saldo(self): return self.__Saldo
+
+    def set_id(self, id): self.__id = id
+    def set_id_cliente(self, id_cliente): self.__id_cliente = id_cliente
+    def set_DataDeAbertura(self, DataDeAbertura): self.__DataDeAbertura = DataDeAbertura
+    def set_Saldo(self, Saldo): self.__Saldo = Saldo
+
+    def __eq__(self, x):
+        if self.__id == x.__id and self.__DataDeAbertura == x.__DataDeAbertura and self.__id_cliente == x.__id_cliente and self.__Saldo == x.__Saldo:
+            return True
+        return False
+    def __str__(self):
+        return f"{self.__id} - {self.__id_cliente} - {self.__DataDeAbertura.strftime("%d/%m/%Y %H:%M")} - {self.__Saldo}"
+    def to_json(self):
+        return {
+            "id": self.__id
+            "id_cliente": self.__id_cliente
+            "DataDeAbertura": self.__DataDeAbertura
+            "Saldo": self.__Saldo
+        }
+
+class NConta:
+    __Contas = []
+    @classmethod
+    #Inserir
+    #Listar
+    #Listar_id
+    #Atualizar
+    #Excluir
+
+    
+
